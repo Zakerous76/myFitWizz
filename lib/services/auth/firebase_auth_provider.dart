@@ -10,7 +10,7 @@ import 'package:firebase_auth/firebase_auth.dart'
 class FirebaseAuthProvider implements AuthProvider {
   @override
   Future<void> initialize() async {
-    Firebase.initializeApp(
+    await Firebase.initializeApp(
       // if its not initialized, the instance of firebase may be null
       options: DefaultFirebaseOptions.currentPlatform,
     );
@@ -63,10 +63,12 @@ class FirebaseAuthProvider implements AuthProvider {
     required String password,
   }) async {
     try {
-      await FirebaseAuth.instance.signInWithEmailAndPassword(
+      final us = await FirebaseAuth.instance.signInWithEmailAndPassword(
         email: email,
         password: password,
       );
+      print("USSS");
+      print(us);
       final user = currentUser;
       if (user != null) {
         return user;
@@ -82,6 +84,8 @@ class FirebaseAuthProvider implements AuthProvider {
         throw GenericAuthException();
       }
     } catch (e) {
+      print("EEEEE");
+      print(e.toString());
       throw GenericAuthException();
     }
   }

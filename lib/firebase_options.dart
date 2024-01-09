@@ -17,10 +17,7 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      throw UnsupportedError(
-        'DefaultFirebaseOptions have not been configured for web - '
-        'you can reconfigure this by running the FlutterFire CLI again.',
-      );
+      return web;
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
@@ -28,10 +25,7 @@ class DefaultFirebaseOptions {
       case TargetPlatform.iOS:
         return ios;
       case TargetPlatform.macOS:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for macos - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return macos;
       case TargetPlatform.windows:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for windows - '
@@ -49,20 +43,39 @@ class DefaultFirebaseOptions {
     }
   }
 
+  static const FirebaseOptions web = FirebaseOptions(
+    apiKey: 'AIzaSyB00NZcnsqWpV0UvUID1k2e5K7tHfBkuMs',
+    appId: '1:123615218015:web:28d72b49631fae2c80ceea',
+    messagingSenderId: '123615218015',
+    projectId: 'myfitwizz-1ef5d',
+    authDomain: 'myfitwizz-1ef5d.firebaseapp.com',
+    storageBucket: 'myfitwizz-1ef5d.appspot.com',
+    measurementId: 'G-EVEVK02BDF',
+  );
+
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDL2_e8lCwTERYLk9zWibBAuaCCvzlzCiM',
-    appId: '1:328367545172:android:7b7e3c823eec4ca4e306c1',
-    messagingSenderId: '328367545172',
-    projectId: 'firstproject-123fs',
-    storageBucket: 'firstproject-123fs.appspot.com',
+    apiKey: 'AIzaSyBEh-wgCbcCfzyoYzjeiiyrA3mvZU-Vino',
+    appId: '1:123615218015:android:5fddc6d0c8edc59080ceea',
+    messagingSenderId: '123615218015',
+    projectId: 'myfitwizz-1ef5d',
+    storageBucket: 'myfitwizz-1ef5d.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyB_IkXtGGrjTcaTcPWD_DAXkLsRC_UXusc',
-    appId: '1:328367545172:ios:af07c82d43dfa444e306c1',
-    messagingSenderId: '328367545172',
-    projectId: 'firstproject-123fs',
-    storageBucket: 'firstproject-123fs.appspot.com',
-    iosBundleId: 'com.tutorials.myfitwizz',
+    apiKey: 'AIzaSyBmRS791lu6ELVmxwq9XRNLBJbNjbuWbA4',
+    appId: '1:123615218015:ios:00080e8bf24d236280ceea',
+    messagingSenderId: '123615218015',
+    projectId: 'myfitwizz-1ef5d',
+    storageBucket: 'myfitwizz-1ef5d.appspot.com',
+    iosBundleId: 'com.example.myfitwizz',
+  );
+
+  static const FirebaseOptions macos = FirebaseOptions(
+    apiKey: 'AIzaSyBmRS791lu6ELVmxwq9XRNLBJbNjbuWbA4',
+    appId: '1:123615218015:ios:af2997c97691020080ceea',
+    messagingSenderId: '123615218015',
+    projectId: 'myfitwizz-1ef5d',
+    storageBucket: 'myfitwizz-1ef5d.appspot.com',
+    iosBundleId: 'com.example.myfitwizz.RunnerTests',
   );
 }
