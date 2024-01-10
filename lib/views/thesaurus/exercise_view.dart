@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:myfitwizz/constants/constants.dart';
+import 'package:myfitwizz/services/cloud_crud/cloud_constants.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 class ExerciseView extends StatefulWidget {

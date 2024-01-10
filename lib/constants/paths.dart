@@ -4,3 +4,4 @@ const powerliftingImgPath = "images/powerlifting.jpg";
 const plankImaPath = "images/plank.png";
 const bodyweightImgPath = "images/bodyweight.jpg";
 const deadhangImgPath = "images/deadhang.jpg";
+const iconImgPath = "images/icon.webp";

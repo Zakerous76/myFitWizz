@@ -9,12 +9,11 @@ import 'package:myfitwizz/constants/routes.dart';
 import 'package:myfitwizz/services/auth/auth_service.dart';
 import 'package:myfitwizz/utilities/add_exercise_view.dart';
 import 'package:myfitwizz/views/calculators/bmi_calculator_view.dart';
-import 'package:myfitwizz/views/thesaurus/exercise_view.dart';
+import 'package:myfitwizz/views/edit_personal_info_view.dart';
 import 'package:myfitwizz/views/login_view.dart';
 import 'package:myfitwizz/views/main_dashboard_view.dart';
-import 'package:myfitwizz/views/notes/create_update_notes_view.dart';
-import 'package:myfitwizz/views/notes/notes_view.dart';
 import 'package:myfitwizz/views/onboarding/onboarding_view.dart';
+import 'package:myfitwizz/views/personal_info_view.dart';
 import 'package:myfitwizz/views/profile_view.dart';
 import 'package:myfitwizz/views/register_view.dart';
 import 'package:myfitwizz/views/onboarding/sign_in_up_view.dart';
@@ -54,17 +53,18 @@ void main() async {
         bodySmall: TextStyle(
           color: darkModeTextColorVar,
         ), // default text style for body text with lower emphasis
-        // Add other TextStyles for different text types if needed
-        labelLarge: TextStyle(color: darkModeTextColorVar), // default)
-        labelMedium: TextStyle(color: darkModeTextColorVar), // default)
-        labelSmall: TextStyle(color: darkModeTextColorVar), // default)
+        labelLarge: TextStyle(color: darkModeTextColorVar),
+        labelMedium: TextStyle(color: darkModeTextColorVar),
+        labelSmall: TextStyle(color: darkModeTextColorVar),
       ),
+      dialogTheme: const DialogTheme(
+          contentTextStyle: TextStyle(
+        color: Colors.black,
+      )),
       bottomNavigationBarTheme: const BottomNavigationBarThemeData(
         backgroundColor: bottomNavigationBarColorVar,
       ),
-      // Set a default font family
-      fontFamily: 'Poppins', // Replace with your font family
-
+      fontFamily: 'Poppins',
       listTileTheme: const ListTileThemeData(
         titleTextStyle: TextStyle(
           color: darkModeTextColorVar,
@@ -87,7 +87,6 @@ void main() async {
       // returns an instance of the loginview
       loginRoute: (context) => const LoginView(),
       registerRoute: (context) => const RegisterView(),
-      notesRoute: (context) => const NotesView(),
       mainRoute: (context) => const HomePage(),
       onboardingRoute: (context) => const OnboardingView(),
       signInUpRoute: (context) => const SignInUpView(),
@@ -98,7 +97,8 @@ void main() async {
       calculatorsRoute: (context) => const CalculatorsView(),
       verifyEmailRoute: (context) => const VerifyEmailView(),
       profileRoute: (context) => const ProfileView(),
-      createOrUpdateNoteRoute: (context) => const CreateUpdateNoteView(),
+      editPersonalInfoRoute: (context) => const EditPersonalInfoView(),
+      personalInfoRoute: (context) => const PersonalInfoView(),
     },
   ));
 }
@@ -109,33 +109,24 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
-        future: AuthService.firebase().initialize(),
-        builder: (context, snapshot) {
-          switch (snapshot.connectionState) {
-            case ConnectionState.done:
-              final user = AuthService.firebase().currentUser;
-              if (user != null) {
-                if (user.isEmailVerified) {
-                  return const NotesView();
-                } else {
-                  return const VerifyEmailView();
-                }
+      future: AuthService.firebase().initialize(),
+      builder: (context, snapshot) {
+        switch (snapshot.connectionState) {
+          case ConnectionState.done:
+            final user = AuthService.firebase().currentUser;
+            if (user != null) {
+              if (user.isEmailVerified) {
+                return const MainDashboardView();
               } else {
-                return const OnboardingView();
+                return const VerifyEmailView();
               }
-            // // "If the user is non-null, take it. If the user is null then take false"
-            // if (user?.emailVerified ?? false) {
-            //   return const Text("Done");
-            // } else {
-            //   print("You are NOT verified, you need to verify my nigga!");
-            //   // Navigator.of(context).push(MaterialPageRoute(          // Since we are returning a "Column" rather than a scaffold widget from the VerifyEmailView()
-            //   //     builder: (context) => const VerifyEmailView()));
-            // }
-            // return const Text("Done");
-
-            default:
-              return const CircularProgressIndicator();
-          }
-        });
+            } else {
+              return const OnboardingView();
+            }
+          default:
+            return const CircularProgressIndicator();
+        }
+      },
+    );
   }
 }

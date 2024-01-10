@@ -27,10 +27,3 @@ const buttonPaddingVar = 16.0;
 
 const bmiDescriptionVar =
     "Body mass index is a value derived from the mass and height of a person. The BMI is defined as the body mass divided by the square of the body height, and is expressed in units of kg/m², resulting from mass in kilograms and height in metres.";
-
-const bodyPartFieldname = "body_part";
-const categoryFieldname = "category";
-const descriptionFieldname = "description";
-const nameFieldname = "name";
-const ytLinkFieldname = "yt_link";
-const exercisesCollectionName = "exercises";

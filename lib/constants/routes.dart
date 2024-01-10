@@ -13,3 +13,5 @@ const bmiCalculatorRoute = "/bmi-calculator/";
 const calculatorsRoute = "/calculators/";
 const addExerciseViewRoute = "/add-exercise/";
 const profileRoute = "/profile/";
+const editPersonalInfoRoute = "/edit-personal-info/";
+const personalInfoRoute = "/personal-info/";

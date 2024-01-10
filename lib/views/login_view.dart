@@ -36,17 +36,17 @@ class _LoginViewState extends State<LoginView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: scaffoldPaddingVar,
-        child: Container(
-          decoration: const BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage(
-                  'images/sign_in_up_image.png'), // Path to your background image
-              fit: BoxFit.cover,
-            ),
+      body: Container(
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage(
+                'images/sign_in_up_image.png'), // Path to your background image
+            fit: BoxFit.cover,
           ),
-          padding: const EdgeInsets.symmetric(horizontal: 16.0),
+        ),
+        padding: const EdgeInsets.symmetric(horizontal: 16.0),
+        child: Padding(
+          padding: scaffoldPaddingVar,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
