@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:myfitwizz/constants/constants.dart';
 import 'package:myfitwizz/services/cloud_crud/cloud_exercises.dart';
-import 'package:myfitwizz/views/exercise_view.dart';
+import 'package:myfitwizz/views/thesaurus/exercise_view.dart';
 
 class ExercisesByCategoryView extends StatefulWidget {
   final String category;

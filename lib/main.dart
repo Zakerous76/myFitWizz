@@ -7,9 +7,9 @@ import 'package:flutter/material.dart';
 import 'package:myfitwizz/constants/constants.dart';
 import 'package:myfitwizz/constants/routes.dart';
 import 'package:myfitwizz/services/auth/auth_service.dart';
-import 'package:myfitwizz/views/add_exercise_view.dart';
-import 'package:myfitwizz/views/bmi_calculator_view.dart';
-import 'package:myfitwizz/views/exercise_view.dart';
+import 'package:myfitwizz/utilities/add_exercise_view.dart';
+import 'package:myfitwizz/views/calculators/bmi_calculator_view.dart';
+import 'package:myfitwizz/views/thesaurus/exercise_view.dart';
 import 'package:myfitwizz/views/login_view.dart';
 import 'package:myfitwizz/views/main_dashboard_view.dart';
 import 'package:myfitwizz/views/notes/create_update_notes_view.dart';
@@ -18,8 +18,8 @@ import 'package:myfitwizz/views/onboarding/onboarding_view.dart';
 import 'package:myfitwizz/views/profile_view.dart';
 import 'package:myfitwizz/views/register_view.dart';
 import 'package:myfitwizz/views/onboarding/sign_in_up_view.dart';
-import 'package:myfitwizz/views/calculators_view.dart';
-import 'package:myfitwizz/views/thesaurus_view.dart';
+import 'package:myfitwizz/views/calculators/calculators_view.dart';
+import 'package:myfitwizz/views/thesaurus/thesaurus_view.dart';
 import 'package:myfitwizz/views/verify_email_view.dart';
 
 void main() async {

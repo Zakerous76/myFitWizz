@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:myfitwizz/constants/constants.dart';
-import 'package:myfitwizz/views/exercises_by_category.dart';
-import 'package:myfitwizz/views/quickworkout_view.dart';
+import 'package:myfitwizz/views/thesaurus/exercises_by_category.dart';
+import 'package:myfitwizz/views/quickworkouts/quickworkout_view.dart';
 
 Widget buildWorkoutCard(
   String title,
