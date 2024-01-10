@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "123615218015",
+    "project_id": "myfitwizz-1ef5d",
+    "storage_bucket": "myfitwizz-1ef5d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:123615218015:android:5fddc6d0c8edc59080ceea",
+        "android_client_info": {
+          "package_name": "com.example.myfitwizz"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBEh-wgCbcCfzyoYzjeiiyrA3mvZU-Vino"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
