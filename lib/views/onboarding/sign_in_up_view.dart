@@ -31,7 +31,7 @@ class SignInUpView extends StatelessWidget {
                 backgroundColor: Colors.yellow, // Button background color
                 foregroundColor: Colors.black, // Button text color
                 padding:
-                    const EdgeInsets.symmetric(horizontal: 33, vertical: 20),
+                    const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
                 textStyle: const TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
@@ -55,7 +55,7 @@ class SignInUpView extends StatelessWidget {
                 backgroundColor: Colors.yellow, // Button background color
                 foregroundColor: Colors.black, // Button text color
                 padding:
-                    const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+                    const EdgeInsets.symmetric(horizontal: 25, vertical: 20),
                 textStyle: const TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
