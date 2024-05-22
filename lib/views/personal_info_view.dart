@@ -8,10 +8,8 @@ class PersonalInfoView extends StatelessWidget {
   Future<Map<String, dynamic>?> getUserData() async {
     final user = FirebaseAuth.instance.currentUser;
     if (user == null) return null;
-
     final userId = user.uid;
     final doc = await FirebaseFirestore.instance.collection('users').doc(userId).get();
-
     return doc.data();
   }
 
@@ -38,8 +36,6 @@ class PersonalInfoView extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text('User ID: ${userData['user_id']}', style: const TextStyle(fontSize: 18)),
-                const SizedBox(height: 10),
                 Text('Username: ${userData['user_name']}', style: const TextStyle(fontSize: 18)),
                 const SizedBox(height: 10),
                 Text('Age: ${userData['age']}', style: const TextStyle(fontSize: 18)),

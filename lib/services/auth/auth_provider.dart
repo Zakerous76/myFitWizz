@@ -15,4 +15,5 @@ abstract class AuthProvider {
   }); // if you cant return an AuthUser, throw an exception.
   Future<void> logOut();
   Future<void> sendEmailVerification();
+  Future<void> updateDisplayName(String displayName);
 }

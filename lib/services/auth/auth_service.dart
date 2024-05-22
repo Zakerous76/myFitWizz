@@ -31,6 +31,10 @@ class AuthService implements AuthProvider {
         password: password,
       );
 
+  Future<void> updateDisplayName(String? displayName) async {
+    provider.updateDisplayName(displayName!);
+  }
+  
   @override
   Future<void> logOut() => provider.logOut();
 

@@ -1,4 +1,5 @@
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:myfitwizz/constants/constants.dart';
 import 'package:myfitwizz/constants/paths.dart';
@@ -8,6 +9,7 @@ import 'package:myfitwizz/utilities/build_workout_card.dart';
 
 class MainDashboardView extends StatefulWidget {
   const MainDashboardView({super.key});
+  
 
   @override
   State<MainDashboardView> createState() => _MainDashboardViewState();
@@ -17,10 +19,10 @@ class _MainDashboardViewState extends State<MainDashboardView> {
   @override
   Widget build(BuildContext context) {
     var screenSizeVar = MediaQuery.of(context).size.width;
-
+    final String username = FirebaseAuth.instance.currentUser!.displayName ?? "";
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Hello zakerous!'),
+        title:  Text('Hello $username!'),
         actions: [
           IconButton(
             onPressed: () {
@@ -50,6 +52,7 @@ class _MainDashboardViewState extends State<MainDashboardView> {
               const Padding(
                 padding: EdgeInsets.all(buttonPaddingVar),
               ),
+              const Text("This Button is not yet implemented"),
               ElevatedButton(
                 onPressed: () {
                   // Navigate to My Workout

@@ -1,5 +1,7 @@
 // ignore_for_file: use_build_context_synchronously
 
+import 'dart:developer';
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
@@ -15,6 +17,8 @@ class ProfileView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final String email = FirebaseAuth.instance.currentUser!.email ?? "";
+    final String name = FirebaseAuth.instance.currentUser!.displayName ?? "";
+    print(FirebaseAuth.instance.currentUser.toString());
 
     return Scaffold(
       appBar: AppBar(
@@ -32,10 +36,10 @@ class ProfileView extends StatelessWidget {
                   radius: 50,
                   backgroundImage: AssetImage(iconImgPath),
                 ),
-                const Center(
+                Center(
                   child: Text(
-                    'User Name',
-                    style: TextStyle(
+                    name,
+                    style: const TextStyle(
                         fontSize: 22,
                         fontWeight: FontWeight.bold,
                         color: buttonTextColorVar),

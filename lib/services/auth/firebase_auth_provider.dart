@@ -109,4 +109,15 @@ class FirebaseAuthProvider implements AuthProvider {
       throw UserNotFoundAuthException();
     }
   }
+  
+  @override
+  Future<void> updateDisplayName(String displayName) async {
+    final user = FirebaseAuth.instance.currentUser;
+    if (user != null) {
+      await user.updateDisplayName(displayName);
+    } else {
+      throw UserNotFoundAuthException();
+    }
+  }
+
 }

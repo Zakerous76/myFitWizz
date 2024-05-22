@@ -97,7 +97,7 @@ void main() async {
       calculatorsRoute: (context) => const CalculatorsView(),
       verifyEmailRoute: (context) => const VerifyEmailView(),
       profileRoute: (context) => const ProfileView(),
-      editPersonalInfoRoute: (context) => const EditPersonalInfoView(),
+      editPersonalInfoRoute: (context) => EditPersonalInfoView(),
       personalInfoRoute: (context) => const PersonalInfoView(),
     },
   ));
