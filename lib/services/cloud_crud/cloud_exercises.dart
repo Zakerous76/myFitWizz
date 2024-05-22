@@ -1,6 +1,5 @@
 // database.dart
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:myfitwizz/constants/constants.dart';
 import 'package:myfitwizz/services/cloud_crud/cloud_constants.dart';
 
 class ExercisesDatabaseService {

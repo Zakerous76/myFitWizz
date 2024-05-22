@@ -1,5 +1,6 @@
 import 'package:myfitwizz/services/auth/auth_user.dart';
 
+
 abstract class AuthProvider {
   Future<void> initialize();
 
