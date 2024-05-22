@@ -81,7 +81,7 @@ class _LoginViewState extends State<LoginView> {
                     borderSide: BorderSide.none,
                   ),
                 ),
-                style: const TextStyle(color: Colors.white),
+                style: const TextStyle(color: Colors.black),
               ),
               const SizedBox(height: 16),
               TextField(
@@ -97,7 +97,7 @@ class _LoginViewState extends State<LoginView> {
                     borderSide: BorderSide.none,
                   ),
                 ),
-                style: const TextStyle(color: Colors.white),
+                style: const TextStyle(color: Colors.black),
               ),
               const SizedBox(height: 24),
               ElevatedButton(
