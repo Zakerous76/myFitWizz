@@ -135,7 +135,7 @@ class _QuickWorkoutViewState extends State<QuickWorkoutView> {
 
     return Text(
       '$hours:$minutes:$seconds',
-      style: const TextStyle(fontSize: 80, fontWeight: FontWeight.bold),
+      style: const TextStyle(fontSize: 50, fontWeight: FontWeight.bold),
     );
   }
 
