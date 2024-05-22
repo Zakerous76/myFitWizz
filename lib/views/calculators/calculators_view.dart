@@ -68,7 +68,7 @@ class _CalculatorsViewState extends State<CalculatorsView> {
                       ),
                     ),
                     const Text(
-                      '1 RM    RPE',
+                      '1 RM',
                       style: TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.bold,
@@ -76,7 +76,7 @@ class _CalculatorsViewState extends State<CalculatorsView> {
                       ),
                     ),
                     Text(
-                      '${_oneRepMax?.toStringAsFixed(1) ?? '0'} | ${_rpeController.text.isNotEmpty ? _rpeController.text : '0'}',
+                      _oneRepMax?.toStringAsFixed(1) ?? '0',
                       style: const TextStyle(
                         fontSize: calculatorsFontSizeVar * 1.5,
                         fontWeight: FontWeight.bold,
