@@ -1,7 +1,6 @@
 // ignore_for_file: use_build_context_synchronously
 
 import 'package:flutter/material.dart';
-import 'package:myfitwizz/constants/constants.dart';
 
 import 'package:myfitwizz/constants/routes.dart';
 import 'package:myfitwizz/services/auth/auth_exceptions.dart';

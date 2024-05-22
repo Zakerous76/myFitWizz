@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:myfitwizz/constants/constants.dart';
 import 'package:myfitwizz/constants/routes.dart';
-import 'package:path/path.dart';
 
 Widget bottomNavigationBarWidget(BuildContext context) {
   return BottomNavigationBar(

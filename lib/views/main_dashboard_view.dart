@@ -1,14 +1,10 @@
-import 'dart:ffi' show Int;
 
 import 'package:flutter/material.dart';
 import 'package:myfitwizz/constants/constants.dart';
 import 'package:myfitwizz/constants/paths.dart';
 import 'package:myfitwizz/constants/routes.dart';
-import 'package:myfitwizz/enums/menu_action.dart';
-import 'package:myfitwizz/services/auth/auth_service.dart';
 import 'package:myfitwizz/utilities/bottom_nav_bar.dart';
 import 'package:myfitwizz/utilities/build_workout_card.dart';
-import 'package:myfitwizz/utilities/dialogs/logout_dialog.dart';
 
 class MainDashboardView extends StatefulWidget {
   const MainDashboardView({super.key});
@@ -60,7 +56,7 @@ class _MainDashboardViewState extends State<MainDashboardView> {
                 },
                 style: ButtonStyle(
                     fixedSize:
-                        MaterialStatePropertyAll(Size(screenSizeVar, 10))),
+                        WidgetStatePropertyAll(Size(screenSizeVar, 10))),
                 child: const Text('My Workout'),
               ),
               const Padding(
@@ -130,7 +126,7 @@ class _MainDashboardViewState extends State<MainDashboardView> {
                   },
                   style: ButtonStyle(
                       fixedSize:
-                          MaterialStatePropertyAll(Size(screenSizeVar, 10))),
+                          WidgetStatePropertyAll(Size(screenSizeVar, 10))),
                   child: const Text('Thesaurus'),
                 ),
               ),

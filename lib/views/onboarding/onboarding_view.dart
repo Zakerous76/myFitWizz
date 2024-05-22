@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:myfitwizz/constants/constants.dart';
 import 'package:myfitwizz/constants/routes.dart';
 
 class OnboardingView extends StatelessWidget {
