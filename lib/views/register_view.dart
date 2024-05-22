@@ -66,6 +66,7 @@ class _RegisterViewState extends State<RegisterView> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              const SizedBox(height: 60),
               const Text(
                 'Welcome to MyFitWizz!',
                 textAlign: TextAlign.center,
@@ -87,8 +88,9 @@ class _RegisterViewState extends State<RegisterView> {
               const SizedBox(height: 24),
               TextField(
                 controller: _username,
+                keyboardType: TextInputType.name,
                 decoration: InputDecoration(
-                  hintText: 'User Name',
+                  hintText: 'Username',
                   hintStyle: const TextStyle(color: Colors.white70),
                   filled: true,
                   fillColor: Colors.white.withOpacity(0.7),
@@ -97,11 +99,13 @@ class _RegisterViewState extends State<RegisterView> {
                     borderSide: BorderSide.none,
                   ),
                 ),
-                style: const TextStyle(color: Colors.white),
+                style: const TextStyle(color: Colors.black),
               ),
               const SizedBox(height: 16),
               TextField(
                 controller: _height,
+                keyboardType: TextInputType.number,
+
                 decoration: InputDecoration(
                   hintText: 'Height',
                   hintStyle: const TextStyle(color: Colors.white70),
@@ -112,11 +116,12 @@ class _RegisterViewState extends State<RegisterView> {
                     borderSide: BorderSide.none,
                   ),
                 ),
-                style: const TextStyle(color: Colors.white),
+                style: const TextStyle(color: Colors.black),
               ),
               const SizedBox(height: 16),
               TextField(
                 controller: _weight,
+                keyboardType: TextInputType.number,
                 decoration: InputDecoration(
                   hintText: 'Weight',
                   hintStyle: const TextStyle(color: Colors.white70),
@@ -127,11 +132,12 @@ class _RegisterViewState extends State<RegisterView> {
                     borderSide: BorderSide.none,
                   ),
                 ),
-                style: const TextStyle(color: Colors.white),
+                style: const TextStyle(color: Colors.black),
               ),
               const SizedBox(height: 16),
               TextField(
                 controller: _age,
+                keyboardType: const TextInputType.numberWithOptions(),
                 decoration: InputDecoration(
                   hintText: 'Age',
                   hintStyle: const TextStyle(color: Colors.white70),
@@ -142,13 +148,14 @@ class _RegisterViewState extends State<RegisterView> {
                     borderSide: BorderSide.none,
                   ),
                 ),
-                style: const TextStyle(color: Colors.white),
+                style: const TextStyle(color: Colors.black),
               ),
               const SizedBox(height: 16),
               TextField(
                 controller: _gender,
                 decoration: InputDecoration(
                   hintText: 'Gender',
+                  
                   hintStyle: const TextStyle(color: Colors.white70),
                   filled: true,
                   fillColor: Colors.white.withOpacity(0.7),
@@ -157,11 +164,12 @@ class _RegisterViewState extends State<RegisterView> {
                     borderSide: BorderSide.none,
                   ),
                 ),
-                style: const TextStyle(color: Colors.white),
+                style: const TextStyle(color: Colors.black),
               ),
               const SizedBox(height: 16),
               TextField(
                 controller: _email,
+                keyboardType: TextInputType.emailAddress,
                 decoration: InputDecoration(
                   hintText: 'Email',
                   hintStyle: const TextStyle(color: Colors.white70),
@@ -172,7 +180,7 @@ class _RegisterViewState extends State<RegisterView> {
                     borderSide: BorderSide.none,
                   ),
                 ),
-                style: const TextStyle(color: Colors.white),
+                style: const TextStyle(color: Colors.black),
               ),
               const SizedBox(height: 16),
               TextField(
@@ -188,7 +196,7 @@ class _RegisterViewState extends State<RegisterView> {
                     borderSide: BorderSide.none,
                   ),
                 ),
-                style: const TextStyle(color: Colors.white),
+                style: const TextStyle(color: Colors.black),
               ),
               
               const SizedBox(height: 24),
